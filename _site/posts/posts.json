@@ -32,5 +32,22 @@
     "preview": {},
     "last_modified": "2021-01-10T10:18:29-05:00",
     "input_file": {}
+  },
+  {
+    "path": "posts/2021-01-10-second-post/",
+    "title": "Second post",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "Nora Jones",
+        "url": "https://example.com/norajones"
+      }
+    ],
+    "date": "2021-01-10",
+    "categories": [],
+    "contents": "\n\n\n\nwhat name is the most common?\n\n# A tibble: 22,263 x 2\n   animal_name           n\n   <chr>             <int>\n 1 UNKNOWN            5379\n 2 BELLA              3824\n 3 NAME NOT PROVIDED  3763\n 4 MAX                3582\n 5 CHARLIE            2852\n 6 COCO               2636\n 7 LOLA               2470\n 8 ROCKY              2414\n 9 LUCY               2149\n10 BUDDY              2011\n# … with 22,253 more rows\n\n\n\n\n\n# A tibble: 22,260 x 2\n   animal_name     n\n   <chr>       <int>\n 1 BELLA        3824\n 2 MAX          3582\n 3 CHARLIE      2852\n 4 COCO         2636\n 5 LOLA         2470\n 6 ROCKY        2414\n 7 LUCY         2149\n 8 BUDDY        2011\n 9 LUNA         1974\n10 LUCKY        1950\n# … with 22,250 more rows\n\n\n# A tibble: 22,260 x 2\n   animal_name     n\n   <chr>       <int>\n 1 Bella        3824\n 2 Max          3582\n 3 Charlie      2852\n 4 Coco         2636\n 5 Lola         2470\n 6 Rocky        2414\n 7 Lucy         2149\n 8 Buddy        2011\n 9 Luna         1974\n10 Lucky        1950\n# … with 22,250 more rows\n\n\n# A tibble: 107,603 x 3\n   animal_name zip_code     n\n   <chr>          <dbl> <int>\n 1 Name           11234   125\n 2 Bella          10312    89\n 3 Bella          10314    87\n 4 Lucy           10128    87\n 5 Bella          10306    81\n 6 Charlie        10009    76\n 7 Lucy           10025    76\n 8 Charlie        10128    74\n 9 Bailey         10312    73\n10 Max            10312    73\n# … with 107,593 more rows\n\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-01-10T10:57:55-05:00",
+    "input_file": "second-post.utf8.md"
   }
 ]
