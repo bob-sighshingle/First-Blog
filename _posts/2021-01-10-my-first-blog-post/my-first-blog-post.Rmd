@@ -1,0 +1,89 @@
+---
+title: "My first blog post"
+description: |
+  A short description of the post.
+author:
+  - name: Nora Jones
+    url: https://example.com/norajones
+date: 01-10-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r}
+library(tidyverse)
+data(starwars)
+names(starwars)
+glimpse(starwars)
+```
+
+```{r}
+starwars %>% 
+  filter(!hair_color %in% c("none", "unknown", NA)) %>%
+  filter(!is.na(gender))%>%
+  ggplot(aes(x = hair_color)) +
+  geom_bar() + 
+  coord_flip() +
+  labs(
+    x = "Hair Color",
+    y = "Frequency",
+    title = "Hair Color of the Various Characters who Appear in Star Wars",
+    caption = "Author: @ani | Source: @tidyverse") +
+  facet_wrap(eye_color~ gender)
+
+```
+```{r}
+starwars %>% 
+  filter(!hair_color %in% c("none", "unknown", NA)) %>%
+  filter(!is.na(gender)) %>%
+  count(hair_color) %>%
+  ggplot() +
+  geom_col(aes(x = hair_color, y = n)) + 
+  coord_flip() +
+  labs(
+    x = "Hair Color",
+    y = "Frequency",
+    title = "Hair Color of the Various Characters who Appear in Star Wars",
+    caption = "Author: @ani | Source: @tidyverse") 
+```
+
+```{r}
+starwars %>% 
+  filter(!hair_color %in% c("none", "unknown", NA)) %>%
+  filter(!is.na(gender)) %>%
+  count(hair_color) %>%
+  ggplot(aes(x = hair_color, y = n)) +
+  geom_bar(stat = "identity", width = 1) +
+  coord_polar("y", start = 0)
+
+```
+
+```{r}
+# Create Data
+data <- data.frame(
+  group=LETTERS[1:5],
+  value=c(13,7,9,21,2)
+)
+# Basic piechart
+ggplot(data, aes(x="", y=value, fill=group)) +
+  geom_bar(stat="identity", width=1, color="white") +
+  coord_polar("y", start=0)
+```
+
+```{r}
+starwars%>%
+  ggplot()+
+  geom_point(
+    aes(x = mass, y = height, color = species, size = birth_year))
+
+```
+
+
+
+

@@ -1,0 +1,15 @@
+---
+title: "About this blog"
+description: |
+  Some additional details about the blog
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+I am bobsighshingle
+
+Hello
+
+I don't know what to say
